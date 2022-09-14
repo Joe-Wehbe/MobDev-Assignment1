@@ -2,6 +2,7 @@ package com.example.currencyconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -23,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         String password_val = password.getText().toString();
 
         if(username_val.equals("user.leb") && password_val.equals("123456")){
-            Toast.makeText(getApplicationContext(), "You have logged in", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "You are logged in", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(getApplicationContext(), LandingActivity.class);
+            startActivity(i);
         }else{
             Toast.makeText(getApplicationContext(), "Incorrect username or password", Toast.LENGTH_LONG).show();
 

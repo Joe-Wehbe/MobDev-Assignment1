@@ -16,19 +16,27 @@ public class LandingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
     }
 
-    static double lbpAmount = 0;
-
     public void lbpInput(View v){
-        EditText extractingValue = findViewById(R.id.lbpAmount);
-        String amount = extractingValue.getText().toString();
-        lbpAmount = Double.parseDouble(amount);
-        Toast.makeText(getApplicationContext(), amount, Toast.LENGTH_LONG).show();
-    }
-
-    public double convertLBPtoUSD(){
+        EditText extractingAmount = findViewById(R.id.lbpAmount);
+        String amount = extractingAmount.getText().toString();
+        double lbpAmount = Double.parseDouble(amount);
         double usdAmount = lbpAmount/40000;
-        return usdAmount;
+        amount = Double.toString(usdAmount);
+        Toast.makeText(getApplicationContext(), amount + " USD", Toast.LENGTH_LONG).show();
     }
 
+    public void usdInput(View v){
+        EditText extractingAmount = findViewById(R.id.usdAmount);
+        String amount = extractingAmount.getText().toString();
+        double usdAmount = Double.parseDouble(amount);
+        double lbpAmount = usdAmount*40000;
+        amount = Double.toString(lbpAmount);
+        Toast.makeText(getApplicationContext(), amount + " LBP", Toast.LENGTH_LONG).show();
+    }
+
+    public void logout(View v){
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+    }
 
 }

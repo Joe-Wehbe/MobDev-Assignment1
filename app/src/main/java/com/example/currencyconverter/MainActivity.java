@@ -32,11 +32,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Log in successful", Toast.LENGTH_LONG).show();
             Intent i = new Intent(getApplicationContext(), LandingActivity.class);
             startActivity(i);
-        } if(username_val.equals("") || password_val.equals("")){
+        } else if(username_val.equals("") || password_val.equals("")){
             Toast.makeText(getApplicationContext(), "Missing credentials", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(getApplicationContext(), "Incorrect username or password", Toast.LENGTH_LONG).show();
+        } else{
+            Toast.makeText(getApplicationContext(), "Incorrect username or passwordddddddddd", Toast.LENGTH_LONG).show();
 
         }
 

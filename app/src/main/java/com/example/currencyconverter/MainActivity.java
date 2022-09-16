@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         } else if(username_val.equals("") || password_val.equals("")){
             Toast.makeText(getApplicationContext(), "Missing credentials", Toast.LENGTH_LONG).show();
         } else{
-            Toast.makeText(getApplicationContext(), "Incorrect username or passwordddddddddd", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Incorrect username or password", Toast.LENGTH_LONG).show();
 
         }
 
